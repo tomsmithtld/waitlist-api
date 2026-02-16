@@ -74,5 +74,5 @@ export default async function handler(req, res) {
     console.error('Slack notification failed:', err.message);
   }
 
-  return res.status(200).json({ ok: true, message: 'You are on the list' });
+  return res.status(200).json({ ok: true, message: 'You are on the list', notified: !!slackToken });
 }
