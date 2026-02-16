@@ -37,7 +37,7 @@ export default async function handler(req, res) {
   }
 
   const slackToken = process.env.SLACK_BOT_TOKEN;
-  const channelId = process.env.SLACK_CHANNEL_ID || 'D0A4LNV77TL';
+  const channelId = process.env.SLACK_CHANNEL_ID || 'U09UV2B2SQ1';
 
   if (!slackToken) {
     console.error('SLACK_BOT_TOKEN not configured');
