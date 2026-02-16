@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/signup",
+      "methods": ["POST", "OPTIONS"],
+      "dest": "/api/signup.js"
+    },
+    {
+      "src": "/(.*)",
+      "status": 404,
+      "dest": "/api/signup.js"
+    }
+  ]
+}
