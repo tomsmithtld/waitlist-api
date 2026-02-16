@@ -69,11 +69,10 @@ export default async function handler(req, res) {
     const data = await slackRes.json();
     if (!data.ok) {
       console.error('Slack error:', data.error);
-      return res.status(200).json({ ok: true, message: 'You are on the list', slackError: data.error });
     }
-    return res.status(200).json({ ok: true, message: 'You are on the list', notified: true });
   } catch (err) {
     console.error('Slack notification failed:', err.message);
-    return res.status(200).json({ ok: true, message: 'You are on the list', slackError: err.message });
   }
+
+  return res.status(200).json({ ok: true, message: 'You are on the list' });
 }
